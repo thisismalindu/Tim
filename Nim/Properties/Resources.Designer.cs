@@ -59,5 +59,15 @@ namespace Nim.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drag_n_drop_here {
+            get {
+                object obj = ResourceManager.GetObject("drag n drop here", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
