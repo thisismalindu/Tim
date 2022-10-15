@@ -1,4 +1,4 @@
-namespace Nim
+namespace Tim
 {
     internal static class Program
     {

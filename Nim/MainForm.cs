@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Nim
+namespace Tim
 {
     public partial class MainForm : Form
     {
@@ -11,8 +11,8 @@ namespace Nim
             defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
 
 
-            txtPackageName.Text = "NimPackage";
-            txtPublisher.Text = "Nim";
+            txtPackageName.Text = "TimPackage";
+            txtPublisher.Text = "Tim";
             txtInstallLocation.Text = defaultPath;
             setInstallLocation(txtPackageName.Text, txtPublisher.Text, txtInstallLocation.Text);
 

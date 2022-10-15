@@ -1,4 +1,4 @@
-﻿namespace Nim
+﻿namespace Tim
 {
     partial class MainForm
     {
@@ -260,7 +260,7 @@
             // 
             this.pnlDrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlDrop.BackgroundImage = global::Nim.Properties.Resources.drag_n_drop_here;
+            this.pnlDrop.BackgroundImage = global::Tim.Properties.Resources.drag_n_drop_here;
             this.pnlDrop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlDrop.Location = new System.Drawing.Point(12, 12);
@@ -326,10 +326,10 @@
             this.Controls.Add(this.grpBasicDetails);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(502, 576);
+            this.MiTimumSize = new System.Drawing.Size(502, 576);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Install with Nim";
+            this.Text = "Install with Tim";
             this.grpBasicDetails.ResumeLayout(false);
             this.grpBasicDetails.PerformLayout();
             this.grpShortcuts.ResumeLayout(false);
