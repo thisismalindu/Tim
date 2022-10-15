@@ -326,7 +326,7 @@
             this.Controls.Add(this.grpBasicDetails);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MiTimumSize = new System.Drawing.Size(502, 576);
+            this.MinimumSize = new System.Drawing.Size(502, 576);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Install with Tim";
