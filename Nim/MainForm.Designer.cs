@@ -106,6 +106,7 @@
             this.btnInstallLocation.TabIndex = 5;
             this.btnInstallLocation.Text = "Browse";
             this.btnInstallLocation.UseVisualStyleBackColor = true;
+            this.btnInstallLocation.Click += new System.EventHandler(this.btnInstallLocation_Click);
             // 
             // txtInstallLocation
             // 
@@ -202,6 +203,8 @@
             // 
             this.chkStartMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkStartMenu.AutoSize = true;
+            this.chkStartMenu.Checked = true;
+            this.chkStartMenu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkStartMenu.ForeColor = System.Drawing.Color.Black;
             this.chkStartMenu.Location = new System.Drawing.Point(191, 24);
             this.chkStartMenu.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -214,6 +217,8 @@
             // chkDesktop
             // 
             this.chkDesktop.AutoSize = true;
+            this.chkDesktop.Checked = true;
+            this.chkDesktop.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkDesktop.ForeColor = System.Drawing.Color.Black;
             this.chkDesktop.Location = new System.Drawing.Point(13, 24);
             this.chkDesktop.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);

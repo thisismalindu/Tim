@@ -40,11 +40,36 @@ namespace Nim
 
         private void setInstallLocation(string packageName, string publisherName, string installLocation)
         {
+            if (publisherName == "")
+            {
+
+                if (packageName == "")
+                {
+                    txtFinalized.Text = installLocation;
+                    return;
+                }
+
+                txtFinalized.Text = installLocation + @"\" + packageName;
+            }
+            else if (packageName == "")
+            {
+                txtFinalized.Text = installLocation + @"\" + publisherName;
+                return;
+            }
             txtFinalized.Text = installLocation + @"\" + publisherName + @"\" + packageName;
+
 
         }
 
+        private void btnInstallLocation_Click(object sender, EventArgs e)
+        {
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                txtInstallLocation.Text = fbd.SelectedPath;
+                setInstallLocation(txtPackageName.Text, txtPublisher.Text, txtInstallLocation.Text);
 
+            }
+        }
     }
 
 
