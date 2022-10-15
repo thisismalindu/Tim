@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.grpBasicDetails = new System.Windows.Forms.GroupBox();
             this.txtFinalized = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -324,6 +325,7 @@
             this.Controls.Add(this.grpShortcuts);
             this.Controls.Add(this.grpBasicDetails);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(502, 576);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
