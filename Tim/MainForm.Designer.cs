@@ -255,6 +255,7 @@
             this.btnInstall.TabIndex = 10;
             this.btnInstall.Text = "Install";
             this.btnInstall.UseVisualStyleBackColor = true;
+            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
             // 
             // pnlDrop
             // 

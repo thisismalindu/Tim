@@ -1,10 +1,14 @@
+using IWshRuntimeLibrary;
 using System.IO;
 
 namespace Tim
 {
     public partial class MainForm : Form
     {
-        private string defaultPath;
+        private string defaultPath; //Default Install Location (eg:Program Files)
+        private string defaultIcon; //Default Icon of the Shortcut
+        private string exePath; //Shortcut EXE Path
+        private string iconPath; //
         public MainForm()
         {
             InitializeComponent();
@@ -15,6 +19,14 @@ namespace Tim
             txtPublisher.Text = "Tim";
             txtInstallLocation.Text = defaultPath;
             setInstallLocation(txtPackageName.Text, txtPublisher.Text, txtInstallLocation.Text);
+
+
+
+            exePath = @"D:\Installers\Tools\OOSU10.exe";
+
+
+
+
 
         }
 
@@ -38,6 +50,29 @@ namespace Tim
 
         }
 
+
+
+        private void btnInstallLocation_Click(object sender, EventArgs e)
+        {
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                txtInstallLocation.Text = fbd.SelectedPath;
+                setInstallLocation(txtPackageName.Text, txtPublisher.Text, txtInstallLocation.Text);
+
+            }
+        }
+
+        private void btnInstall_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        //EXTRA FUNCTIONS
+
+        //Set the Finalized Installation Location to the txtFinalized TexBox
         private void setInstallLocation(string packageName, string publisherName, string installLocation)
         {
             if (publisherName == "")
@@ -49,27 +84,42 @@ namespace Tim
                     return;
                 }
 
-                txtFinalized.Text = installLocation + @"\" + packageName;
+                txtFinalized.Text = System.IO.Path.Combine(installLocation, packageName);
+
             }
             else if (packageName == "")
             {
-                txtFinalized.Text = installLocation + @"\" + publisherName;
+                txtFinalized.Text = System.IO.Path.Combine(installLocation, publisherName);
                 return;
             }
-            txtFinalized.Text = installLocation + @"\" + publisherName + @"\" + packageName;
+            txtFinalized.Text = System.IO.Path.Combine(installLocation, publisherName, packageName);
 
 
         }
 
-        private void btnInstallLocation_Click(object sender, EventArgs e)
+        //Make Shortcuts based on the checkboxes: Desktop, Startmenu and Startup
+        private void makeShortcuts()
         {
-            if (fbd.ShowDialog() == DialogResult.OK)
-            {
-                txtInstallLocation.Text = fbd.SelectedPath;
-                setInstallLocation(txtPackageName.Text, txtPublisher.Text, txtInstallLocation.Text);
+            //if (chkDesktop.Checked)
+            //{
+            //    Utilities.CreateShortcut(txtPackageName.Text, Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Open " + txtPackageName.Text, exePath, exePath);
+            //}
+            //if (chkStartMenu.Checked)
+            //{
+            //    Utilities.CreateShortcut(txtPackageName.Text, Environment.GetFolderPath(Environment.SpecialFolder.StartMenu), "Open " + txtPackageName.Text, exePath, iconPath);
+            //}
+            //if (chkStartup.Checked)
+            //{
+            //    Utilities.CreateShortcut(txtPackageName.Text, Environment.GetFolderPath(Environment.SpecialFolder.Startup), "Open " + txtPackageName.Text, exePath, iconPath);
+            //}
 
-            }
         }
+
+        
+
+        
+
+
     }
 
 
